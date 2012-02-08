@@ -1,0 +1,6 @@
+Módulos que proporcionan funcionalidades comunes a profesor y alumno:
+
+* SMdns
+* SBotXMPP
+* IRPCModule (Interfaz de módulo RPC)
+* settings.py (configuraciones comunes)

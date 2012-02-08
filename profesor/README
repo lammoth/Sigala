@@ -1,0 +1,8 @@
+Módulos con la funcionalidad exclusiva del profesor (gestor de recursos):
+
+* SCore
+* SGuiProfe
+* SProfe (bot)
+* SXmppServer
+* SDBus
+* settings.py (Configuraciones del profesor)

@@ -1,0 +1,25 @@
+<RCC>
+  <qresource prefix="img" >
+    <file>images/home.png</file>
+    <file>images/up.png</file>
+    <file>images/refresh.png</file>
+    <file>images/download.png</file>
+    <file>images/view-list-details.png</file>
+    <file>images/view-list-icons.png</file>
+    <file>images/remote-list-file.png</file>
+  </qresource>
+  <qresource prefix="mimetype" >
+    <file>mimetypes/mimetype-audio.png</file>
+    <file>mimetypes/mimetype-folder.png</file>
+    <file>mimetypes/mimetype-file.png</file>
+    <file>mimetypes/mimetype-html.png</file>
+    <file>mimetypes/mimetype-image.png</file>
+    <file>mimetypes/mimetype-oocalc.png</file>
+    <file>mimetypes/mimetype-ooimpress.png</file>
+    <file>mimetypes/mimetype-oowriter.png</file>
+    <file>mimetypes/mimetype-pdf.png</file>
+    <file>mimetypes/mimetype-txt.png</file>
+    <file>mimetypes/mimetype-video.png</file>
+    <file>mimetypes/mimetype-zip.png</file>
+  </qresource>
+</RCC>

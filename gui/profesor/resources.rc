@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="img" >
+    <file>exit.png</file>
+    <file>help-faq.png</file>
+    <file>cigala.png</file>
+    <file>key.png</file>
+    <file>key-forbidden.png</file>
+  </qresource>
+  <qresource prefix="tr" >
+    <file>sgui_profesor_en.qm</file>
+  </qresource>
+</RCC>

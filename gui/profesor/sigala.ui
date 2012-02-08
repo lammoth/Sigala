@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Juan Ramón González Hidalgo &amp; David Erosa García</author>
+ <class>SGuiProfe</class>
+ <widget class="QMainWindow" name="SGuiProfe">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>333</width>
+    <height>523</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SIGALA</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.rc">
+    <normaloff>:/img/cigala.png</normaloff>:/img/cigala.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLineEdit" name="tGrupo">
+        <property name="toolTip">
+         <string>Escriba aquí el nombre del grupo que desea crear</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bGrupoAction">
+        <property name="toolTip">
+         <string>Crea un grupo de trabajo con el nombre especificado</string>
+        </property>
+        <property name="text">
+         <string>Crear grupo</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="default">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="bViewResources">
+      <property name="font">
+       <font>
+        <underline>true</underline>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string>color: #373891;</string>
+      </property>
+      <property name="text">
+       <string>Ver grupos existentes en la red</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lGrupo">
+      <property name="toolTip">
+       <string>Nombre del grupo actual</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Bitstream Vera Sans&quot;;
+border-color: rgb(255, 0, 0);
+</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabGrupo">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <attribute name="title">
+        <string>En el grupo</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QListWidget" name="userList">
+            <property name="toolTip">
+             <string>Lista de usuarios que forman parte del grupo de trabajo</string>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::ExtendedSelection</enum>
+            </property>
+            <property name="spacing">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="bKick">
+              <property name="toolTip">
+               <string>Expulsa a un usuario del grupo</string>
+              </property>
+              <property name="text">
+               <string>Expulsar</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="bBan">
+              <property name="toolTip">
+               <string>Prohibe al usuario el acceso al grupo</string>
+              </property>
+              <property name="text">
+               <string>Prohibir acceso</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="bIdent">
+              <property name="toolTip">
+               <string>Identifica al usuario</string>
+              </property>
+              <property name="text">
+               <string>Identificar</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabBan">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <attribute name="title">
+        <string>Acceso prohibido</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QListWidget" name="banList">
+            <property name="toolTip">
+             <string>Lista de usuarios que han sido expulsados del grupo de trabajo</string>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::ExtendedSelection</enum>
+            </property>
+            <property name="spacing">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bUnBan">
+            <property name="toolTip">
+             <string>Readmite un usuario al que se le ha prohibido la entrada</string>
+            </property>
+            <property name="text">
+             <string>Readmitir</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="bAbrirCerrarGrupo">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Permite o deniega el acceso al grupo de trabajo</string>
+      </property>
+      <property name="text">
+       <string>Cerrar grupo</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.rc">
+        <normaloff>:/img/key.png</normaloff>
+        <normalon>:/img/key-forbidden.png</normalon>:/img/key.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>333</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAcciones">
+    <property name="title">
+     <string>&amp;Acciones</string>
+    </property>
+    <addaction name="action_Salir"/>
+   </widget>
+   <widget class="QMenu" name="menuAplicaciones">
+    <property name="title">
+     <string>A&amp;plicaciones</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuAy_uda">
+    <property name="title">
+     <string>Ay&amp;uda</string>
+    </property>
+    <addaction name="actionAyuda"/>
+    <addaction name="separator"/>
+    <addaction name="actionAcercaDe"/>
+   </widget>
+   <widget class="QMenu" name="menuHerramientas">
+    <property name="title">
+     <string>Herramientas</string>
+    </property>
+    <addaction name="actionLog"/>
+   </widget>
+   <addaction name="menuAcciones"/>
+   <addaction name="menuAplicaciones"/>
+   <addaction name="menuHerramientas"/>
+   <addaction name="menuAy_uda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Salir">
+   <property name="icon">
+    <iconset resource="resources.rc">
+     <normaloff>:/img/exit.png</normaloff>:/img/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca &amp;de</string>
+   </property>
+  </action>
+  <action name="actionAyuda">
+   <property name="icon">
+    <iconset resource="resources.rc">
+     <normaloff>:/img/help-faq.png</normaloff>:/img/help-faq.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ayuda</string>
+   </property>
+  </action>
+  <action name="actionAcercaDe">
+   <property name="icon">
+    <iconset resource="resources.rc">
+     <normaloff>:/img/cigala.png</normaloff>:/img/cigala.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acerca &amp;de...</string>
+   </property>
+  </action>
+  <action name="actionLog">
+   <property name="text">
+    <string>Visor de eventos</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.rc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>action_Salir</sender>
+   <signal>activated()</signal>
+   <receiver>SGuiProfe</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>165</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tGrupo</sender>
+   <signal>returnPressed()</signal>
+   <receiver>bGrupoAction</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

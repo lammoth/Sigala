@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/img" >
+    <file>cigala.png</file>
+  </qresource>
+  <qresource prefix="tr" >
+    <file>sgui_common_en.qm</file>
+  </qresource>
+</RCC>

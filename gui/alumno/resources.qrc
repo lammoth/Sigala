@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="img" >
+    <file>led_gray.png</file>
+    <file>connect.svg</file>
+    <file>disconnect.svg</file>
+    <file>led_green.png</file>
+    <file>cigala_connected.png</file>
+    <file>cigala.png</file>
+  </qresource>
+  <qresource prefix="tr" >
+    <file>sgui_alumno_en.qm</file>
+  </qresource>
+</RCC>

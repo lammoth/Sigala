@@ -1,0 +1,6 @@
+Directorio con los módulos exclusivos de alumnos (cliente de recurso):
+
+* SCoreAlumno
+* SGuiAlumno
+* SAlumno (bot)
+* settings.py (configuraciones del alumno)
