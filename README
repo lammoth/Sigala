@@ -1,1 +1,12 @@
-SIGALA
+SIGALA is an application that allow you to manage users in place (originally for a educational purpose, manage pupils).
+
+SIGALA uses the following technologies:
+- Ejabberd
+- SleekXMPP
+- Avahi
+- DBUS
+- QT
+
+
+SIGALA is written in Python.
+
